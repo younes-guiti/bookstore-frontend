@@ -58,6 +58,16 @@ npm run dev
 
 Ce frontend est déployé sur **Vercel**, connecté au backend hébergé sur **Railway** (avec base de données MySQL).
 
+## 🐳 Développement avec Docker
+
+Ce projet peut aussi être lancé avec Docker, en même temps que le backend et une base MySQL, via `docker-compose.yml` (à la racine du dossier parent contenant les deux repos) :
+
+​```bash
+docker compose up --build
+​```
+
+Le site sera alors disponible sur `http://localhost:5173`.
+
 ## Auteur
 
 **Younes abdelmoutaleb Guiti** — Étudiant en Master 1 Ingénierie Logicielle (Software Engineering), USTHB
