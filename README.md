@@ -1,16 +1,63 @@
-# React + Vite
+# 📚 Book Store — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web de bibliothèque/librairie en ligne, avec gestion des rôles (utilisateur / administrateur), catalogue de livres, panier, commandes, et tableau de bord différencié.
 
-Currently, two official plugins are available:
+🔗 **Démo en ligne** : [bookstore-frontend-git-main-younes-abdelmoutaleb.vercel.app](https://bookstore-frontend-git-main-younes-abdelmoutaleb.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Backend / API** : [bookstore-backend](https://github.com/younes-guiti/bookstore-backend)
 
-## React Compiler
+## Aperçu
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Catalogue de livres avec recherche et filtres
+- Panier d'achat et système de commandes
+- Authentification JWT avec réinitialisation de mot de passe par email
+- Deux expériences distinctes selon le rôle :
+  - **Utilisateur** : parcours du catalogue, panier, suivi de ses commandes
+  - **Administrateur** : tableau de bord avec statistiques et graphiques, gestion des utilisateurs, gestion des livres, traitement des commandes, notifications en temps réel
 
-## Expanding the ESLint configuration
+## Stack technique
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** (Vite)
+- **React Router** pour la navigation
+- **Framer Motion** pour les animations
+- **Recharts** pour les graphiques du dashboard admin
+- **Axios** pour les appels API
+- **Lucide React** pour les icônes
+
+## Fonctionnalités principales
+
+- 🔐 Authentification (inscription, connexion, mot de passe oublié)
+- 📖 CRUD complet des livres (côté admin)
+- 🛒 Panier persistant et création de commandes
+- 📊 Dashboard admin avec statistiques, graphiques (commandes par statut, inscriptions récentes) et activité en temps réel
+- 🔔 Système de notifications admin (nouvelles commandes, nouveaux utilisateurs, nouveaux livres)
+- 👥 Gestion des utilisateurs et des rôles (admin uniquement)
+- ⚙️ Page de paramètres (profil, mot de passe, préférences)
+
+## Installation locale
+
+\`\`\`bash
+git clone https://github.com/younes-guiti/bookstore-frontend.git
+cd bookstore-frontend
+npm install
+\`\`\`
+
+Crée un fichier \`.env\` à la racine avec :
+
+\`\`\`
+VITE_API_URL=http://localhost:5000/api
+\`\`\`
+
+Puis lance le serveur de développement :
+
+\`\`\`bash
+npm run dev
+\`\`\`
+
+## Déploiement
+
+Ce frontend est déployé sur **Vercel**, connecté au backend hébergé sur **Railway** (avec base de données MySQL).
+
+## Auteur
+
+**Younes abdelmoutaleb Guiti** — Étudiant en Master 1 Ingénierie Logicielle (Software Engineering), USTHB
